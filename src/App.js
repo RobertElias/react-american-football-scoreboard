@@ -5,6 +5,7 @@ import "./App.css";
 import React, {useState} from "react";
 
 import BottomRow from "./BottomRow";
+import Score from './components/Score'
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -15,14 +16,17 @@ function App() {
   const [team2, setAwayTeam] = useState('Tigers');
   const [awayScore, setAwayScore] = useState(0);
   
+  // click handler for home team
   let homeTD = () =>{
-    //console.log("homeScoreClick");
+    //console.log("homeTD");
     setHomeScore(homeScore + 6)
   }
 
   let homeFG = ()=>{
     setHomeScore(homeScore + 1)
   } 
+  
+  //click handler for away team
   let awayTD = ()=>{
     setAwayScore(awayScore + 6)
   } 
