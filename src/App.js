@@ -61,23 +61,28 @@ function App() {
         <BottomRow />
       </section>
       <section className="buttons">
-        <div className="homeButtons">
-          {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" 
-          onClick = {homeTD} 
-          >Home Touchdown</button>
-          <button className="homeButtons__fieldGoal "
-          onClick = {homeFG}
-          >Home Field Goal</button>
-        </div>
-        <div className="awayButtons">
-          <button className="awayButtons__touchdown"
-          onClick = {awayTD}
-          >Away Touchdown</button>
-          <button className="awayButtons__fieldGoal"
-          onClick = {awayFG}
-          >Away Field Goal</button>
-        </div>
+
+      <Score 
+        TD={homeTD}
+        FG={homeFG}
+        firstClassName={"homeButtons"}
+        secondClassName={"_touchdown"}
+        thirdClassName={"-fieldGoal"}
+        side= {"Home"}
+      />
+
+
+      <Score 
+        TD={awayTD}
+        FG={awayFG}
+        firstClassName={"homeButtons"}
+        secondClassName={"_touchdown"}
+        thirdClassName={"-fieldGoal"}
+        side={"Away"}
+      />
+      
+        
+        
       </section>
     </div>
   );
