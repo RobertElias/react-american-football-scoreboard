@@ -19,27 +19,21 @@ function App() {
   // click handler for home team
   let homeTD = () =>{
     //console.log("homeTD");
-    setHomeScore(homeScore + 6)
+    setHomeScore(homeScore + 7)
   }
 
   let homeFG = ()=>{
-    setHomeScore(homeScore + 1)
+    setHomeScore(homeScore + 3)
   } 
   
   //click handler for away team
   let awayTD = ()=>{
-    setAwayScore(awayScore + 6)
+    setAwayScore(awayScore + 7)
   } 
   let awayFG = ()=>{
-    setAwayScore(awayScore + 1)
+    setAwayScore(awayScore + 3)
   }
-  // const [renderCounter, setRenderCounter] =  React.useState(0);
   
-  // React.useEffect(()=> {
-  //   setTeam1('Lions')
-  //   setRenderCounter(renderCounter + 1)
-  // }, [])
-  // console.log(team1)
   
   return (
     <div className="container">
